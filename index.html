@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>No Nuts, No Problem – Nut-Free Spread Coming Soon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="A nut-free, school-safe spread that actually tastes good. Passes the Spoon Test™ and is made for allergy families, schools, and hospitals."
+  />
+
+  <!-- ================================================= -->
+  <!-- ✅ GOOGLE ANALYTICS (GA4) TRACKING -->
+  <!-- ================================================= -->
+  <!-- Replace G-XXXXXXX with your Google Analytics Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- ================================================= -->
+  <!-- ✅ HOTJAR HEATMAP & SESSION RECORDING (OPTIONAL) -->
+  <!-- ================================================= -->
+  <!-- Replace HOTJAR_ID with your Hotjar Site ID, or remove this block if not using Hotjar -->
+  <script>
+    (function(h,o,t,j,a,r){
+        h.hj = h.hj || function(){ (h.hj.q = h.hj.q || []).push(arguments) };
+        h._hjSettings={hjid: HOTJAR_ID, hjsv: 6};
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script'); r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+
+  <!-- ================================================= -->
+  <!-- ✅ BRAND FONTS -->
+  <!-- ================================================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&family=Lora:wght@400;500;600&family=Montserrat:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      /* Brand colours */
+      --primary: #a02fcb;
+      --primary-dark: #571770;
+      --bg: #f9f9f9;
+      --card: #ffffff;
+      --accent: var(--primary);
+      --accent-soft: rgba(160, 47, 203, 0.1);
+      --alt-gold: #f0ce67;
+      --alt-teal: #2fbecb;
+
+      --text-main: #111827;
+      --text-muted: #6b7280;
+      --border-subtle: #e5e7eb;
+      --radius-lg: 18px;
+      --shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Lora", serif; /* Paragraph font */
+      background: radial-gradient(circle at top, #ffffff 0, var(--bg) 55%);
+      color: var(--text-main);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 32px 16px;
+    }
+
+    .page {
+      max-width: 1000px;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    @media (max-width: 800px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 28px 24px;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(15, 23, 42, 0.04);
+    }
+
+    .badge-row {
+      background: var(--accent-soft);
+      color: var(--primary-dark);
+      border-radius: 999px;
+      padding: 6px 12px;
+      display: inline-flex;
+      gap: 8px;
+      margin-bottom: 18px;
+      font-size: 11px;
+      font-weight: 600;
+      align-items: center;
+      font-family: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .badge-dot {
+      width: 8px;
+      height: 8px;
+      background: #2fbecb;
+      border-radius: 50%;
+      box-shadow: 0 0 0 4px rgba(47, 190, 203, 0.25);
+    }
+
+    h1 {
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: var(--primary-dark);
+    }
+
+    .highlight {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--alt-gold);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 12px;
+      margin-top: 4px;
+      font-family: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #3b2a00;
+    }
+
+    .highlight span {
+      font-weight: 700;
+    }
+
+    p.lead {
+      color: var(--text-muted);
+      margin: 16px 0 20px;
+      font-size: 0.98rem;
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .pill {
+      border: 1px solid var(--border-subtle);
+      padding: 6px 11px;
+      border-radius: 999px;
+      font-size: 11px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--primary-dark);
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--alt-gold);
+    }
+
+    .pill-dot.teal {
+      background: var(--alt-teal);
+    }
+
+    .pill-dot.purple {
+      background: var(--primary);
+    }
+
+    .subcopy {
+      font-size: 11px;
+      color: #9ca3af;
+      margin-top: 8px;
+    }
+
+    .side {
+      display: flex;
+    }
+
+    .side-inner {
+      background: radial-gradient(circle at top left, #f6e8ff 0, #fdf2ff 35%, #e0f8fb 100%);
+      padding: 22px;
+      border-radius: 26px;
+      position: relative;
+      box-shadow: var(--shadow-soft);
+      border: 1px solid rgba(160, 47, 203, 0.15);
+    }
+
+    .spoon-card {
+      background: rgba(255, 255, 255, 0.96);
+      padding: 16px 15px;
+      border-radius: 20px;
+      border: 1px solid rgba(229, 231, 235, 0.7);
+    }
+
+    .spoon-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      font-weight: 700;
+      color: var(--primary-dark);
+    }
+
+    .spoon-card p {
+      font-size: 0.9rem;
+      color: #4b5563;
+      margin-bottom: 10px;
+    }
+
+    .meter-track {
+      width: 100%;
+      height: 7px;
+      background: #e5e7eb;
+      border-radius: 999px;
+      overflow: hidden;
+      margin-bottom: 4px;
+    }
+
+    .meter-fill {
+      width: 92%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--alt-teal), var(--primary));
+    }
+
+    .meter-label {
+      font-size: 11px;
+      color: #6b7280;
+      font-family: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 11px;
+      color: #6b7280;
+      margin-top: 20px;
+    }
+
+    /* Form styling using brand fonts/colours */
+    form.mc-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-top: 4px;
+    }
+
+    form.mc-form input[type="email"] {
+      flex: 1;
+      min-width: 220px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      background: #ffffff;
+      font-size: 14px;
+      font-family: "Lora", serif;
+      transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+
+    form.mc-form input[type="email"]:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 1px rgba(160, 47, 203, 0.35);
+      outline: none;
+      background: #fdf9ff;
+    }
+
+    form.mc-form button {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--primary);
+      color: #ffffff;
+      white-space: nowrap;
+      font-family: "League Spartan", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 12px 26px rgba(87, 23, 112, 0.35);
+      transition: transform 0.08s ease, box-shadow 0.08s ease, background 0.12s ease;
+    }
+
+    form.mc-form button:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 32px rgba(87, 23, 112, 0.4);
+    }
+
+    form.mc-form button:active {
+      transform: translateY(0);
+      box-shadow: 0 10px 20px rgba(87, 23, 112, 0.35);
+    }
+
+    @media (max-width: 800px) {
+      form.mc-form {
+        align-items: stretch;
+      }
+
+      form.mc-form button {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<main class="page">
+
+  <!-- LEFT SIDE: Copy + Mailchimp Signup -->
+  <section class="card">
+    <div class="badge-row">
+      <div class="badge-dot"></div>
+      Allergy-safe spread • Coming soon
+    </div>
+
+    <h1>Nut-free spreads that actually taste good.</h1>
+
+    <div class="highlight">
+      <span>New</span>
+      Passes the Spoon Test™ straight from the fridge
+    </div>
+
+    <p class="lead">
+      <strong>No Nuts, No Problem</strong> is a school-safe, made-in-Canada spread
+      crafted for allergy families, schools, and hospitals that refuse to compromise on taste,
+      safety, or texture.
+    </p>
+
+    <div class="pill-list">
+      <div class="pill">
+        <div class="pill-dot"></div>
+        Nut-free &amp; school-safe*
+      </div>
+      <div class="pill">
+        <div class="pill-dot teal"></div>
+        Designed with allergy parents
+      </div>
+      <div class="pill">
+        <div class="pill-dot purple"></div>
+        Built for schools &amp; hospitals
+      </div>
+    </div>
+
+    <!-- ================================================= -->
+    <!-- ✅ MAILCHIMP SIGNUP FORM (WIRED TO YOUR AUDIENCE) -->
+    <!-- ================================================= -->
+    <form
+      action="https://github.us13.list-manage.com/subscribe/post?u=ed104bf999ba953e8d529106d&amp;id=0853ff6014&amp;f_id=00a988eaf0"
+      method="post"
+      id="mc-embedded-subscribe-form"
+      name="mc-embedded-subscribe-form"
+      class="validate mc-form"
+      onsubmit="if (typeof gtag === 'function') { gtag('event','mailchimp_signup'); }"
+      target="_blank"
+      novalidate
+    >
+      <!-- Email field -->
+      <input
+        type="email"
+        name="EMAIL"
+        class="required email"
+        id="mce-EMAIL"
+        placeholder="Enter your email to join the waitlist"
+        required
+      />
+
+      <!-- Submit button -->
+      <button
+        type="submit"
+        name="subscribe"
+        id="mc-embedded-subscribe"
+        class="button"
+      >
+        Get early access →
+      </button>
+
+      <!-- Anti-bot honeypot (Mailchimp requirement) -->
+      <div aria-hidden="true" style="position:absolute; left:-5000px;">
+        <input
+          type="text"
+          name="b_ed104bf999ba953e8d529106d_0853ff6014"
+          tabindex="-1"
+          value=""
+        />
+      </div>
+    </form>
+
+    <div class="subcopy">
+      No spam. Only launch updates, tasting opportunities, and early-bird pricing.
+    </div>
+  </section>
+
+  <!-- RIGHT SIDE (Spoon Test Visual) -->
+  <section class="side">
+    <div class="side-inner">
+      <div class="spoon-card">
+        <strong>🥄 Spoon Test™ Score</strong>
+        <p>We’re validating a spread kids will happily eat <em>by the spoonful</em>, not just tolerate.</p>
+
+        <div class="meter-track">
+          <div class="meter-fill"></div>
+        </div>
+        <div class="meter-label">92% kid-approved (prototype target)</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  *Formulation and certifications still in progress. Not yet available for sale.
+</footer>
+
+</body>
+</html>
