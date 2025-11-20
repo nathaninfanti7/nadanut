@@ -467,7 +467,7 @@
       to { transform: rotate(360deg); }
     }
 
-    /* ✅ Jar larger now */
+    /* Jar */
     .hero-jar {
       position: relative;
       z-index: 2;
@@ -484,78 +484,7 @@
       50% { transform: translateY(-10px) rotate(2deg); }
     }
 
-    .spoon-card {
-      position: absolute;
-      right: -6px;
-      bottom: 4px;
-      z-index: 3;
-      background: rgba(255,255,255,0.98);
-      color: var(--text-main);
-      padding: 10px 12px;
-      border-radius: 16px;
-      max-width: 210px;
-      border: 1px solid rgba(229, 231, 235, 0.9);
-      box-shadow: 0 18px 36px rgba(15, 23, 42, 0.55);
-    }
-
-    .spoon-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 4px;
-    }
-
-    .spoon-title {
-      font-family: "Montserrat";
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: var(--primary-dark);
-      display: flex;
-      gap: 4px;
-      align-items: center;
-    }
-
-    .spoon-chip {
-      font-family: "League Spartan";
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.09em;
-      padding: 2px 7px;
-      border-radius: 99px;
-      background: #ecfeff;
-      color: #036672;
-      border: 1px solid #2fbecb;
-    }
-
-    .spoon-body {
-      font-size: 0.78rem;
-      color: #4b5563;
-      margin-bottom: 6px;
-    }
-
-    .meter-track {
-      width: 100%;
-      height: 6px;
-      border-radius: 999px;
-      background: #e5e7eb;
-      overflow: hidden;
-      margin-bottom: 3px;
-    }
-
-    .meter-fill {
-      width: 92%;
-      height: 100%;
-      background: linear-gradient(90deg, var(--alt-teal), var(--primary));
-    }
-
-    .meter-label {
-      font-family: "League Spartan";
-      font-size: 0.65rem;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-      color: #6b7280;
-    }
-
+    /* hero corner tag (still on) */
     .hero-corner-tag {
       position: absolute;
       top: 8px;
@@ -718,7 +647,7 @@
       .why-grid { grid-template-columns: 1fr; }
     }
 
-    /* SPOON SECTION – now with animated spoon */
+    /* SPOON SECTION – with animated spoon */
 
     .spoon-section {
       margin-top: 40px;
@@ -805,20 +734,29 @@
       margin-top: 8px;
     }
 
-    /* NEW: animated spoon graphic */
+    /* animated spoon area */
     .spoon-right {
       position: relative;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: center;   /* center horizontally */
       justify-content: center;
       gap: 12px;
     }
 
-   
+    .spoon-graphic-wrap {
+      position: relative;
+      width: 420px;
+      max-width: 100%;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;  /* center spoon in wrapper */
+    }
+
     .spoon-blob {
       position: absolute;
-      inset: 12% 0 0 6%;
+      inset: 10%;
       border-radius: 60% 70% 70% 60%;
       background:
         radial-gradient(circle at 0% 0%, #f0ce67 0, transparent 60%),
@@ -829,40 +767,24 @@
       transform: rotate(-8deg);
     }
 
-  /* MASSIVE SPOON */
-.spoon-graphic-wrap {
-  position: relative;
-  width: 420px !important;      /* increase container width */
-  height: 420px !important;     /* optional – keeps it centered */
-  max-width: none !important;   /* remove artificial limits */
-}
-
-.spoon-graphic {
-  width: 160% !important;        /* make the spoon HUGE */
-  max-width: none !important;    /* ensure no limits */
-  transform-origin: top center;
-  filter: drop-shadow(0 25px 30px rgba(15, 23, 42, 0.6));
-  animation: spoon-swing 3.6s ease-in-out infinite;
-}
-
     .spoon-graphic {
-  position: relative;
-  transform: translateX(-100px) rotate(-18deg);
-  transform-origin: top center;
-  animation: spoon-swing 3.6s ease-in-out infinite;
-}
-
-
+      position: relative;
+      width: 160%;
+      max-width: none;
+      transform-origin: center center;
+      filter: drop-shadow(0 25px 30px rgba(15, 23, 42, 0.6));
+      animation: spoon-swing 3.6s ease-in-out infinite;
+    }
 
     @keyframes spoon-swing {
-      0%   { transform: rotate(-18deg) translateY(4px); }
-      50%  { transform: rotate(6deg) translateY(-10px); }
-      100% { transform: rotate(-18deg) translateY(4px); }
+      0%   { transform: translateY(4px) rotate(-18deg); }
+      50%  { transform: translateY(-10px) rotate(6deg); }
+      100% { transform: translateY(4px) rotate(-18deg); }
     }
 
     .spoon-graphic:hover {
       animation-play-state: paused;
-      transform: rotate(0deg) translateY(-4px) scale(1.05);
+      transform: translateY(-4px) rotate(0deg) scale(1.05);
     }
 
     .spoon-label-chip {
@@ -1005,21 +927,7 @@
               class="hero-jar"
             />
 
-            <div class="spoon-card">
-              <div class="spoon-row">
-                <div class="spoon-title">🥄 Spoon Test™</div>
-                <div class="spoon-chip">In testing</div>
-              </div>
-              <div class="spoon-body">
-                Kids say they’d happily eat it <strong>by the spoonful</strong> —
-                not just sandwiched between bread.
-              </div>
-              <div class="meter-track">
-                <div class="meter-fill"></div>
-              </div>
-              <div class="meter-label">92% “would eat again” target</div>
-            </div>
-
+            <!-- spoon-card removed so jar is clean -->
             <div class="hero-corner-tag">
               <div class="hero-corner-tag-dot"></div>
               Recruiting school pilots
@@ -1088,7 +996,7 @@
         </div>
       </section>
 
-      <!-- SPOON TEST SECTION WITH ANIMATED SPOON -->
+      <!-- SPOON TEST SECTION WITH CENTERED ANIMATED SPOON -->
       <section class="spoon-section" id="spoon">
         <div>
           <h2 class="spoon-left-title">What is the Spoon Test™?</h2>
@@ -1139,7 +1047,3 @@
   </div>
 </body>
 </html>
-
-
-
-
