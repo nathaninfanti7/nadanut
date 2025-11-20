@@ -829,116 +829,95 @@
       color: #6b7280;
       text-align: center;
     }
-/* ------------------------------------
-   STYLE C — CLEAN, MODERN CPG BRAND
-   ------------------------------------ */
+/* ===========================
+   WARM FOOD-BRAND THEME (Style A)
+   =========================== */
 
-/* Global background (warm, clean, minimal) */
+/* Warm creamy background */
 body {
-  background: linear-gradient(180deg, #ffffff, #fff7dc 45%, #fceebe 100%);
-  font-family: "Lora", serif;
-  color: #2b2340;
+  background: linear-gradient(180deg, #fff7e1, #fff2c8, #ffeeb5);
 }
 
-/* Remove AI-style neon glow panels */
-.hero,
-.section,
-.card {
+/* Hero gradient: warm, soft, food-like */
+.hero-content {
+  background: linear-gradient(
+    145deg,
+    #a02fcb 0%,
+    #b75bd8 25%,
+    #d8aef5 45%,
+    #ffe6ab 75%
+  );
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 0 12px 20px rgba(0,0,0,0.10);
+  border: 6px solid #ffffffaa;
+}
+
+/* Organic food-style blobs */
+.hero-inner-disc,
+.spoon-blob {
+  border-radius: 55% 65% 45% 60%;
+  filter: blur(1.5px);
+}
+
+/* Warm, natural jar lighting (no neon glow) */
+.hero-jar {
+  filter:
+    drop-shadow(0 12px 18px rgba(0,0,0,0.35))
+    drop-shadow(0 0 12px rgba(240,206,103,0.4)); /* warm gold glow */
+}
+
+/* Panels/cards — remove glassmorphism */
+.feature-card,
+.section-card,
+.info-card {
   background: #ffffff;
-  border-radius: 28px;
-  box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-  backdrop-filter: none;
-  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 22px;
+  padding: 28px;
+  border: 2px solid #f3e8ff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
 
-/* Cleaner headings (premium CPG) */
+/* Food-brand typography */
 h1, h2, h3 {
   font-family: "League Spartan", sans-serif;
   font-weight: 700;
-  letter-spacing: -0.4px;
-  color: #2b2340;
+  letter-spacing: -0.5px;
+  color: #3d064f;
 }
 
-/* Clean buttons (no neon) */
-button, .btn {
-  background: #a02fcb;
-  color: white;
-  padding: 14px 28px;
-  border-radius: 14px;
-  font-family: "League Spartan", sans-serif;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform .15s ease, box-shadow .15s ease;
+p {
+  font-family: "Lora", serif;
+  color: #4a3b50;
+  line-height: 1.65;
 }
 
-button:hover, .btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 18px rgba(0,0,0,0.12);
-}
-
-/* Chips / tags — clean, premium */
-.tag, .pill, .badge {
-  background: #f0e6ff;
-  color: #4b1a73;
-  border-radius: 24px;
-  padding: 6px 14px;
-  font-family: "League Spartan", sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-}
-
-/* Remove overpowering purple glow under jar */
-.hero-inner-disc {
-  background: linear-gradient(160deg, #e6d8ff, #c0bce2 60%, #bfb4e8);
-  filter: blur(18px);
-  opacity: 0.55;
-  inset: 5% 15%;
-  box-shadow: none;
-}
-
-/* Product jar — clean shadow */
-.hero-jar {
-  width: 95%;
-  filter: drop-shadow(0 14px 24px rgba(0,0,0,0.22));
-}
-
-/* Spoon section — no neon glow */
-.spoon-blob {
-  background: linear-gradient(135deg, #fef6d8, #f7eab7);
-  opacity: 0.65;
-  width: 85%;
-  height: 85%;
-  top: -8%;
-  left: 10%;
-  filter: blur(12px);
-}
-
-/* Spoon shadow more natural food brand style */
-.spoon-graphic {
-  filter: drop-shadow(0 12px 16px rgba(0,0,0,0.25));
-}
-
-/* Section titles cleaner */
-.section-title {
-  font-family: "League Spartan", sans-serif;
+/* Friendly buttons — no neon */
+.button-primary {
+  background: #2fbecb;
+  color: #fff;
   font-weight: 700;
-  margin-bottom: 6px;
-  color: #3b2a4a;
+  border-radius: 14px;
+  padding: 14px 24px;
+  border: none;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
+  transition: 0.2s ease;
 }
 
-/* Cards for "Why Nadanut" section */
-.info-card {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 22px;
-  border: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 4px 18px rgba(0,0,0,0.04);
-  transition: transform .15s ease, box-shadow .15s ease;
+.button-primary:hover {
+  background: #27a9b3;
 }
 
-.info-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+/* Warm, properly positioned spoon blob */
+.spoon-blob {
+  position: absolute;
+  top: -12%;
+  left: 18%;
+  width: 110%;
+  height: 110%;
+  background: linear-gradient(145deg, #f0ce67 0%, #a02fcb 60%);
+  opacity: 0.8;
+  filter: blur(3px);
 }
 
     
@@ -1182,6 +1161,7 @@ button:hover, .btn:hover {
   </div>
 </body>
 </html>
+
 
 
 
