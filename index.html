@@ -815,16 +815,7 @@
       gap: 12px;
     }
 
-    .spoon-graphic-wrap {
-      position: relative;
-      width: 220px;
-      max-width: 260px;
-      aspect-ratio: 3 / 5;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
+   
     .spoon-blob {
       position: absolute;
       inset: 12% 0 0 6%;
@@ -838,20 +829,22 @@
       transform: rotate(-8deg);
     }
 
-    .spoon-graphic {
+  /* MASSIVE SPOON */
+.spoon-graphic-wrap {
   position: relative;
-  width: 90%;
+  width: 420px !important;      /* increase container width */
+  height: 420px !important;     /* optional – keeps it centered */
+  max-width: none !important;   /* remove artificial limits */
+}
+
+.spoon-graphic {
+  width: 180% !important;        /* make the spoon HUGE */
+  max-width: none !important;    /* ensure no limits */
   transform-origin: top center;
-  filter: drop-shadow(0 18px 26px rgba(15, 23, 42, 0.6));
+  filter: drop-shadow(0 25px 30px rgba(15, 23, 42, 0.6));
   animation: spoon-swing 3.6s ease-in-out infinite;
 }
 
-/* Bigger spoon only on larger screens */
-@media (min-width: 900px) {
-  .spoon-graphic {
-    width: 120%;
-  }
-}
 
 
     @keyframes spoon-swing {
@@ -1139,4 +1132,5 @@
   </div>
 </body>
 </html>
+
 
