@@ -829,95 +829,50 @@
       color: #6b7280;
       text-align: center;
     }
-/* ===========================
-   WARM FOOD-BRAND THEME (Style A)
-   =========================== */
 
-/* Warm creamy background */
-body {
-  background: linear-gradient(180deg, #fff7e1, #fff2c8, #ffeeb5);
+.hero-title {
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin-bottom: 14px;
 }
 
-/* Hero gradient: warm, soft, food-like */
-.hero-content {
-  background: linear-gradient(
-    145deg,
-    #a02fcb 0%,
-    #b75bd8 25%,
-    #d8aef5 45%,
-    #ffe6ab 75%
-  );
-  border-radius: 40px;
-  padding: 40px;
-  box-shadow: 0 12px 20px rgba(0,0,0,0.10);
-  border: 6px solid #ffffffaa;
+.hero-subtext {
+  font-size: 1.15rem;
+  max-width: 420px;
+  opacity: 0.9;
+  margin-bottom: 22px;
 }
 
-/* Organic food-style blobs */
-.hero-inner-disc,
-.spoon-blob {
-  border-radius: 55% 65% 45% 60%;
-  filter: blur(1.5px);
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 26px;
 }
 
-/* Warm, natural jar lighting (no neon glow) */
-.hero-jar {
-  filter:
-    drop-shadow(0 12px 18px rgba(0,0,0,0.35))
-    drop-shadow(0 0 12px rgba(240,206,103,0.4)); /* warm gold glow */
+.hero-badges .badge {
+  background: rgba(255,255,255,0.18);
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  backdrop-filter: blur(4px);
 }
 
-/* Panels/cards — remove glassmorphism */
-.feature-card,
-.section-card,
-.info-card {
-  background: #ffffff;
-  border-radius: 22px;
-  padding: 28px;
-  border: 2px solid #f3e8ff;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+.hero-email {
+  display: flex;
+  gap: 10px;
+  max-width: 420px;
 }
 
-/* Food-brand typography */
-h1, h2, h3 {
-  font-family: "League Spartan", sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.5px;
-  color: #3d064f;
-}
-
-p {
-  font-family: "Lora", serif;
-  color: #4a3b50;
-  line-height: 1.65;
-}
-
-/* Friendly buttons — no neon */
-.button-primary {
-  background: #2fbecb;
-  color: #fff;
-  font-weight: 700;
+.hero-email input {
+  flex: 1;
+  padding: 14px 16px;
   border-radius: 14px;
-  padding: 14px 24px;
-  border: none;
-  box-shadow: 0 6px 12px rgba(0,0,0,0.18);
-  transition: 0.2s ease;
-}
-
-.button-primary:hover {
-  background: #27a9b3;
-}
-
-/* Warm, properly positioned spoon blob */
-.spoon-blob {
-  position: absolute;
-  top: -12%;
-  left: 18%;
-  width: 110%;
-  height: 110%;
-  background: linear-gradient(145deg, #f0ce67 0%, #a02fcb 60%);
-  opacity: 0.8;
-  filter: blur(3px);
+  border: 2px solid rgba(255,255,255,0.25);
+  background: rgba(255,255,255,0.18);
+  color: white;
+  font-size: 1rem;
 }
 
     
@@ -953,38 +908,31 @@ p {
             Nut-free butter that actually tastes good
           </div>
 
-          <div class="hero-heading-wrap">
-            <div class="hero-heading-splash"></div>
-            <h1 class="hero-title">
-              Meet Nadanut — <br/>
-              the nut-free butter glow-up.
-            </h1>
-          </div>
+         <div class="hero-heading-wrap">
+  <div class="hero-heading-splash"></div>
+  <h1 class="hero-title">
+    Meet Nadanut — <br/>
+    the nut-free butter glow-up.
+  </h1>
+</div>
 
-          <div class="hero-tagline">
-            <span class="hero-tagline-dot"></span>
-            Built for allergy families, schools &amp; hospitals
-          </div>
+<p class="hero-subtext">
+  Crafted in an allergen-free facility so every kid can enjoy a safer, tastier spread.
+</p>
 
-          <p class="hero-copy">
-            <strong>Nadanut butter</strong> is crafted in an allergen-free facility so you can
-            pack lunches, stock cafeterias, and scoop straight from the jar without the
-            “is this safe?” stress.
-          </p>
+<div class="hero-badges">
+  <span class="badge">Nut-Free & School-Safe</span>
+  <span class="badge">Gluten-Free & Vegan</span>
+  <span class="badge">Made in Canada</span>
+</div>
 
-          <div class="hero-badges">
-            <div class="hero-badge">
-              <span class="hero-badge-dot"></span>
-              Nut-Free &amp; School-Safe*
-            </div>
-            <div class="hero-badge">
-              <span class="hero-badge-dot" style="background:#2fbecb;"></span>
-              Gluten-Free &amp; Vegan
-            </div>
-            <div class="hero-badge">
-              <span class="hero-badge-dot" style="background:#f97316;"></span>
-              Made in Canada
-            </div>
+<div class="hero-email">
+  <input type="email" placeholder="Join the early tasters list">
+  <button class="button-primary">Join the Waitlist →</button>
+</div>
+
+
+          
           </div>
 
           <!-- Mailchimp form -->
@@ -1161,6 +1109,7 @@ p {
   </div>
 </body>
 </html>
+
 
 
 
