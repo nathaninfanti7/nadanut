@@ -839,12 +839,20 @@
     }
 
     .spoon-graphic {
-      position: relative;
-      width: 80%;
-      transform-origin: top center;
-      filter: drop-shadow(0 18px 26px rgba(15, 23, 42, 0.6));
-      animation: spoon-swing 3.6s ease-in-out infinite;
-    }
+  position: relative;
+  width: 90%;
+  transform-origin: top center;
+  filter: drop-shadow(0 18px 26px rgba(15, 23, 42, 0.6));
+  animation: spoon-swing 3.6s ease-in-out infinite;
+}
+
+/* Bigger spoon only on larger screens */
+@media (min-width: 900px) {
+  .spoon-graphic {
+    width: 120%;
+  }
+}
+
 
     @keyframes spoon-swing {
       0%   { transform: rotate(-18deg) translateY(4px); }
@@ -1131,3 +1139,4 @@
   </div>
 </body>
 </html>
+
